@@ -57,7 +57,7 @@ const crawImage = async (pageMarket) => {
 
   const divs = await page.$$(".market-card-hero-common .bg-common");
 
-  await new Promise((resolve) => setTimeout(resolve, 8000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
 
   for (let i = 0; i < divs.length; i++) {
     const div = await divs[i].waitForSelector(".box-id");
@@ -75,7 +75,7 @@ const crawImage = async (pageMarket) => {
 };
 
 (async () => {
-  for (let i = 101; i <= 200; i++) {
+  for (let i = 101; i <= 192; i++) {
     await crawImage(i);
   }
 })();
